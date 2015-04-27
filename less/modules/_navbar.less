@@ -1,0 +1,248 @@
+@var-gradient: 7%;
+.nav-bar {
+	font-size: 16px;
+	background: -webkit-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
+	background: -moz-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
+	background: -ms-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
+	background: linear-gradient(to bottom, @light 0%, darken(@light, @var-gradient) 100%) @light;
+	width: 100%;
+	min-height: 50px;
+	border-bottom: 5px solid darken(@light, 20%);
+	padding-bottom: 0px;
+	&.nav-bar-fixed {
+		z-index: 99999999999;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+	}
+	&.nav-bar-radius {
+		border-radius: 3px;
+		&.nav-bar-radius-big {
+			border-radius: 5px;
+		}
+	}
+	& ul > li {
+	  list-style: none;
+	
+	  display: inline-block;
+	  float: left;
+	  padding: 12px 0px 15px 0px;
+	  margin: 0px;
+	  @flip-size: 18px;
+	  position: relative;
+	  &.right{
+	  	float: right;
+	  }
+	  &.active.home:after{
+	  	content: '';
+	  	display: block;
+	  	top: 55px;
+	  	left: 0px;
+	  	height: 0px;
+	  	border-bottom: @flip-size solid rgba(0, 0, 0, 0);
+	  	border-left: @flip-size - 1px solid darken(@color, 20%);
+	  	border-right: @flip-size solid darken(@color, 20%);
+	  	border-top: 0px solid darken(@color, 20%);
+	  	position: absolute;
+	  	-moz-box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
+	  	box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
+	  }
+	  &.home:not(.active):hover:after{
+	  	content: '';
+	  	display: block;
+	  	top: 55px;
+	  	left: 0px;
+	  	height: 0px;
+	  	border-bottom: @flip-size solid rgba(0, 0, 0, 0);
+	  	border-left: @flip-size - 1px solid darken(@light, 30%);
+	  	border-right: @flip-size solid darken(@light, 30%);
+	  	border-top: 0px solid darken(@light, 30%);
+	  	position: absolute;
+	  }
+	}
+	& ul > li:hover > a {
+	  background: -webkit-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
+	  background: -moz-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
+	  background: -ms-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
+	  background: linear-gradient(to bottom, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
+	  color: @dark;
+	  border-bottom: 5px solid darken(@light, 30%);
+	}
+	& ul > li.active > a {
+	  color: @light;
+	  background-color: @color;
+	  border-bottom: 5px solid darken(@color, 20%);
+	  background: -webkit-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	  background: -moz-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	  background: -ms-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	  background: linear-gradient(to bottom, @color 0%, darken(@color, 10%) 100%);
+		-moz-box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
+		box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
+	}
+	& ul > li.logo {
+	  padding: 12px 10px 0px;
+	}
+	& ul > li.logo img {
+	  height: 32px;
+	}
+	& ul > li > ul {
+	  z-index: -1;
+	  top: 50px;
+	  left: 0;
+	  padding-left: @size;
+	  width: 100%;
+	  display: none;
+	  position: absolute;
+	  background-color: darken(@light, 10%);
+	  color: @dark;
+	  border-bottom: 5px solid @light;
+	  -webkit-transition: all .3s ease;
+	  -moz-transition: all .3s ease;
+	  -ms-transition: all .3s ease;
+	  transition: all .3s ease;
+	}
+	& ul > li ul > li {
+	  display: none;
+	  z-index: -1;
+	  padding: 12px 0px 15px 0px;
+	}
+	& ul > li ul > li:hover > a {
+	  z-index: -1;
+	  background-color: darken(@light, 20%);
+	  color: @dark;
+	  border-bottom: 5px solid darken(@light, 10%);
+	}
+	& ul > li ul > li.active > a:hover {
+	  z-index: -1;
+	  box-shadow: none;
+	  color: @light;
+	  background-color: @color;
+	  border-bottom: 5px solid darken(@light, 10%);
+	}
+	& ul > li:hover ul > li, ul > li:hover ul {
+	  top: 53px;
+	  display: inline-block;
+	}
+	& ul > li > a {
+	  color: @dark;
+	  padding: 13px 10px 16px;
+	}
+	& ul > li > a:hover > a {
+	  color: @dark;
+	}
+	& ul > li {
+		& > a.active > a, &  > a:active > a {
+			color: @light;
+	 	}
+	}
+}
+
+.pull {
+	display: none;
+	position: relative;
+	top: 0px;
+	right: @size;
+	float: right;
+	width: 45px;
+	height: 55px;
+	cursor: pointer;
+	padding: 10px 10px 11px;
+	background-color: @color;
+	color: @dark;
+	border-bottom: 5px solid darken(@color, 20%);
+	margin-bottom: -5px;
+	background: -webkit-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	background: -moz-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	background: -ms-linear-gradient(top, @color 0%, darken(@color, 10%) 100%);
+	background: linear-gradient(to bottom, @color 0%, darken(@color, 10%) 100%);
+	box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
+  
+	& .bar, & .bar:before, & .bar:after {
+		content: '';
+		top: 10px;
+		width: 25px;
+		height: 3px;
+		background-color: lighten(@color, 5%);
+		-moz-box-shadow: 0 -1px 0 lighten(@color, 10%),0 1px 0 darken(@color, 10%);
+		box-shadow: 0 -1px 0 lighten(@color, 10%), 0 1px 0 darken(@color, 10%);
+		position: absolute;
+		display: block;
+		transition: all .5s linear;
+	}
+	&.active .bar{
+		box-shadow: none;
+		top: 20px;
+		transform: rotateZ(45deg);
+		background-color: lighten(@color, 10%);
+	}
+	&.active .bar:before{
+		opacity: 0;
+		top: 0;
+		box-shadow: none;
+		transform: rotateZ(-45deg);
+	}
+	
+	&.active .bar:after{
+		box-shadow: none;
+		top: 0px;
+		background-color: lighten(@color, 10%);
+		transform: rotateZ(-90deg);
+	}
+	
+	& .bar:before{
+		top: 10px;
+	}
+	
+	& .bar:after{
+		top: 20px;
+	}
+}
+
+
+
+@media (max-width: 768px) {
+	.nav-bar {
+		& ul > li {
+			display: none;
+		}
+		& ul > li.logo {
+			display: block;
+		}
+		& ul > li.drop {
+			display: block;
+			padding: 0px;
+			width: 100%;
+		}
+		& ul > li.drop:active,
+		& ul > li.drop.active > a{
+			color: @light;
+			background-color: darken(@color, 10%);
+			border-bottom: none;
+		}
+		& ul > li.drop:hover > a {
+			color: @dark;
+			background-color: darken(@light, 10%);
+			border-bottom: none;
+		}
+		
+		& ul > li.drop:first-of-type {
+			margin-top: 5px;
+		}
+		& ul > li.drop > ul,
+		& ul > li.drop ul > li,
+		& ul > li.drop.logo {
+			display: none;
+		}
+		& ul > li.drop > a {
+			width: 100% !important;
+			display: block;
+			background-color: transparent;
+			border: none;
+			margin: 0px;
+			padding: 10px 10px;
+		}
+	}
+	.pull {
+		display: block;
+	}
+}

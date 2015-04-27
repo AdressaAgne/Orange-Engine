@@ -1,0 +1,76 @@
+h1, h2, h3, h4, h5, h6{
+	font: small 'Josefin Sans', sans-serif;
+	& small{
+		color: lighten(@color, 35%);
+	}
+}
+
+.subheader{
+	display: block;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: @dark;
+	margin-top: 10px;
+	letter-spacing: 2px;
+	text-shadow: 0 2px @light;
+	a {
+		color: @dark;
+		&:hover{
+			color: @color;
+		}
+	}
+}
+.header-header, .header-header a{
+	padding: 10px 0px;
+	margin: 20px 10px 10px;
+	position: relative;
+	color: @dark;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 4em;
+	font-weight: normal;
+	color: @light;
+	text-shadow: 0 2px @dark, 0 0 50px @dark;
+	&:hover{
+		color: @color;
+	}
+	
+}
+
+.page-header{
+	margin-top: 40px;
+	& h1, & h2, & h3, & h4, & h5, & h6{
+		padding: 10px 0px;
+		margin: 20px 10px 10px;
+		position: relative;
+		color: @dark;
+		//font-family: Georgia, "Times New Roman", Times, serif;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 1.5em;
+		font-weight: normal;
+		color: @dark;
+		text-shadow: 0 2px @light;
+		& small{
+			.subheader();
+		}
+		&.color-dark{
+			color: @dark;
+		}
+	}
+	
+}
+
+p{
+	font: 16px 'Open Sans', sans-serif;
+	padding: 10px 5px;
+}
+
+.align-center{
+	text-align: center;
+}
+.align-left{
+	text-align: left;
+}
+.align-right{
+	text-align: right;
+}
