@@ -5,7 +5,9 @@ table{
 	background-color: @light;
 	color: @dark;
 	border: none;
-	
+	& td{
+		padding: 5px 10px;
+	}
 	&.border{
 		border-radius: 3px;
 		border: 1px solid lighten(@dark, 5%);

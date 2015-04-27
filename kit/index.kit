@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--
+    © Agne Ødegaard 2015, © Orangee.me
+-->
+<html lang="en">
+<head>
+    <meta name="author" content="Agne Ødegaard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ff8800">
+    
+    <link rel="stylesheet" href="css/main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,600|Open+Sans:300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	
+    <title>Orangee Engine</title>
+</head>
+<body>   
+<!-- @import _inc/_menu.kit -->
+	
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h1>Orange Engine <small>A lightweigt responsive engine</small></h1>
+		</div>
+		<div class="col-12">
+			<p>Download at <a href="https://github.com/OrangeeWeb/Orange-Engine">github</a></p>
+		</div>
+	</div>
+	<div class="row" id="grid">
+		<div class="page-header">
+			<h2>Grid <small>.col-x, .col-tab-x, .col-phone-x and .row</small></h2>
+		</div>
+		<div class="col-12">
+<pre class="light-well">
+.hidden-desktop
+.hidden-tab
+.hidden-phone
+.visible-desktop
+.visible-tab
+.visible-phone</pre>
+		</div>
+		
+		<div class="col-12 align-center">
+			<div class="col-1"><div class="col-12 well">1</div></div>
+			<div class="col-11"><div class="col-12 well">11</div></div>
+			
+			<div class="col-2"><div class="col-12 well">2</div></div>
+			<div class="col-10"><div class="col-12 well">10</div></div>
+			
+			<div class="col-3"><div class="col-12 well">3</div></div>
+			<div class="col-9"><div class="col-12 well">9</div></div>
+			
+			<div class="col-4"><div class="col-12 well">4</div></div>
+			<div class="col-8"><div class="col-12 well">8</div></div>
+			
+			<div class="col-5"><div class="col-12 well">5</div></div>
+			<div class="col-7"><div class="col-12 well">7</div></div>
+			
+			<div class="col-6"><div class="col-12 well">6</div></div>
+			<div class="col-6"><div class="col-12 well">6</div></div>
+			
+			<div class="col-7"><div class="col-12 well">7</div></div>
+			<div class="col-5"><div class="col-12 well">5</div></div>
+			
+			<div class="col-8"><div class="col-12 well">8</div></div>
+			<div class="col-4"><div class="col-12 well">4</div></div>
+			
+			<div class="col-9"><div class="col-12 well">9</div></div>
+			<div class="col-3"><div class="col-12 well">3</div></div>
+			
+			<div class="col-10"><div class="col-12 well">10</div></div>
+			<div class="col-2"><div class="col-12 well">2</div></div>
+			
+			<div class="col-11"><div class="col-12 well">1</div></div>
+			<div class="col-1"><div class="col-12 well">11</div></div>
+			
+			<div class="col-12"><div class="col-12 well">12</div></div>
+		</div>
+	</div>
+	<div class="row" id="tables">
+		<div class="page-header">
+			<h1>Tabels</h1>
+		</div>
+		<div class="col-12">
+			<div class="col-12">
+				<p>Normal</p>
+				<table>
+					<thead>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p>with <b>.border</b> class</p>
+				
+				<table class="border">
+					<thead>
+						<tr><td>lorem</td>
+						<td>ipsum</td>
+						<td>dolor</td>
+						<td>sit</td>
+						<td>amet</td>
+					</tr></thead>
+					
+					<tbody>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+				
+				<p>with <b>.border</b> class and <b>.even</b> class</p>
+				
+				<table class="border even">
+					<thead>
+						<tr><td>lorem</td>
+						<td>ipsum</td>
+						<td>dolor</td>
+						<td>sit</td>
+						<td>amet</td>
+					</tr></thead>
+					
+					<tbody>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+				<p>with <b>.border</b> class and <b>.divider</b> class</p>
+				
+				<table class="border divider">
+					<thead>
+						<tr><td>lorem</td>
+						<td>ipsum</td>
+						<td>dolor</td>
+						<td>sit</td>
+						<td>amet</td>
+					</tr></thead>
+					
+					<tbody>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+				<p>with <b>.border</b> class, <b>.even</b> class and <b>.hover</b> class</p>
+				
+				<table class="border even hover">
+					<thead>
+						<tr><td>lorem</td>
+						<td>ipsum</td>
+						<td>dolor</td>
+						<td>sit</td>
+						<td>amet</td>
+					</tr></thead>
+					
+					<tbody>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+						<tr>
+							<td>lorem</td>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+							<td>amet</td>
+						</tr>
+					</tbody>
+					
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	<div class="row" id="forms">
+		<div class="page-header">
+			<h1>Froms <small>Normal syntax</small></h1>
+		</div>
+		<div class="col-12">
+		<pre class="light-well">
+&lt;div class=<span style="color: #0000e6;">"form-element"</span>&gt;
+	&lt;label&gt;Dark: .negative
+		&lt;input type=<span style="color: #0000e6;">"text"</span> class=<span style="color: #0000e6;">"negative"</span> name=<span style="color: #0000e6;">""</span> value=<span style="color: #0000e6;">""</span> /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;</pre>
+		</div>
+		<div class="col-12">
+			<h3 class="subheader">Text / textarea</h3>
+		</div>
+		<div class="col-6">
+			<div class="form-element">
+				<label>Dark: .negative
+					<input type="text" class="negative" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>
+			
+			<div class="form-element">
+				<label>Blue: .primal
+					<input type="text" class="primal" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>	
+			
+			<div class="form-element">
+				<label>Green: .success
+					<input type="text" class="success" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>
+			
+			<div class="form-element">
+				<label>White: no class
+					<input type="text" class="" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-element">
+				<label>Red: .danger
+					<input type="text" class="danger" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>	
+			
+			<div class="form-element">
+				<label>Yellow: .warning
+					<input type="text" class="warning" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>
+			
+			<div class="form-element">
+				<label>Theme Color: .color
+					<input type="text" class="color" placeholder="placeholder" name="" value="" />
+				</label>
+			</div>
+		</div>
+		<div class="col-12">
+			<h3 class="subheader">Buttons</h3>
+		</div>
+		<div class="col-12 align-center">
+				<input type="button" class="btn" name="" value="White" />
+				<input type="button" class="btn negative" name="" value="Negative" />
+				<input type="button" class="btn primal" name="" value="Primal" />
+				<input type="button" class="btn success" name="" value="Success" />
+				<input type="button" class="btn danger" name="" value="Danger" />
+				<input type="button" class="btn warning" name="" value="Warning" />
+				<input type="button" class="btn color" name="" value="Color" />
+
+		</div>
+	</div>
+	<div class="row" id="classes">
+		<div class="page-header">
+			<h1>Classes <small>Helpers</small></h1>
+		</div>
+		<div class="col-12">
+			<div class="col-12">
+				<h3 class="subheader">Wells</h3>
+				<div class="col-6">
+					<div class="col-12 well">
+						.well
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="col-12 light-well">
+						.light-well
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<h3 class="subheader">Typography header</h3>
+				<div class="col-4">
+					<div class="page-header">
+						<h1>.page-header <small>&lt;small>text&lt;/small></small></h1>	
+					</div>
+				</div>
+				
+				<div class="col-4">
+					<div class="subheader">
+						.subheader	
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<h3 class="subheader">Typography align</h3>
+				<div class="col-4 align-left">
+					.align-left
+				</div>
+				<div class="col-4 align-center">
+					.align-center
+				</div>
+				<div class="col-4 align-right">
+					.align-right
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/min/main.min.js"></script>
+<script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+                $('html, body').stop();
+            });
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function(){
+                        $("html, body").unbind("scroll mousedown DOMMouseScroll mousewheel keyup");
+                    });
+                return false;
+              }
+            }
+        });
+    });
+    
+</script>
+</body>
+</html>
