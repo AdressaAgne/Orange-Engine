@@ -14,6 +14,12 @@
 		top: 0px;
 		left: 0px;
 	}
+	&.nav-bar-fixed-bottom {
+		z-index: 99999999999;
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+	}
 	&.nav-bar-radius {
 		border-radius: 3px;
 		&.nav-bar-radius-big {
@@ -174,7 +180,7 @@
 
 
 @media (max-width: 768px) {
-	.nav-bar {
+	.nav-bar.not(.nav-bar-disable-mobile) {
 		& ul > li {
 			display: none;
 		}
