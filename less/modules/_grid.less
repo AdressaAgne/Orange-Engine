@@ -6,6 +6,7 @@
 	clear: both;
 }
 
+
 [class*='col-']{
 	float: left;
 	padding: 5px;
@@ -32,7 +33,21 @@
 	display: block;
 }
 
-
+/*Tablet view*/
+@media (min-width: 1200px) {
+	
+	.generate-columns-tablet(@total_rows);
+	
+	.generate-columns-tablet(@n, @i: 1) when (@i =< @n) {
+	  .col-big-@{i} {
+	    width: (@i * 100% / @n);
+	  }
+	  .col-big-offset-@{i} {
+	    margin-left: (@i * 100% / @n);
+	  }
+	  .generate-columns-tablet(@n, (@i + 1));
+	}	
+}
 .generate-columns(@total_rows);
 
 .generate-columns(@n, @i: 1) when (@i =< @n) {

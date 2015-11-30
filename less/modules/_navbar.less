@@ -146,11 +146,15 @@
 		box-shadow: 0 -1px 0 lighten(@color, 10%), 0 1px 0 darken(@color, 10%);
 		position: absolute;
 		display: block;
-		transition: all .5s linear;
+		transition: all .05s linear;
 	}
 	&.active .bar{
 		box-shadow: none;
 		top: 20px;
+		-webkit-transform: rotateZ(45deg);
+		-moz-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		-o-transform: rotateZ(45deg);
 		transform: rotateZ(45deg);
 		background-color: lighten(@color, 10%);
 	}
@@ -158,6 +162,10 @@
 		opacity: 0;
 		top: 0;
 		box-shadow: none;
+		-webkit-transform: rotateZ(-45deg);
+		-moz-transform: rotateZ(-45deg);
+		-ms-transform: rotateZ(-45deg);
+		-o-transform: rotateZ(-45deg);
 		transform: rotateZ(-45deg);
 	}
 	
@@ -165,6 +173,10 @@
 		box-shadow: none;
 		top: 0px;
 		background-color: lighten(@color, 10%);
+		-webkit-transform: rotateZ(-90deg);
+		-moz-transform: rotateZ(-90deg);
+		-ms-transform: rotateZ(-90deg);
+		-o-transform: rotateZ(-90deg);
 		transform: rotateZ(-90deg);
 	}
 	
@@ -180,7 +192,7 @@
 
 
 @media (max-width: 768px) {
-	.nav-bar.not(.nav-bar-disable-mobile) {
+	.nav-bar {
 		& ul > li {
 			display: none;
 		}
