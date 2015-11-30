@@ -1,8 +1,6 @@
 .nav-bar {
 	font-size: 16px;
 	background: -webkit-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
-	background: -moz-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
-	background: -ms-linear-gradient(top, @light 0%, darken(@light, @var-gradient) 100%) @light;
 	background: linear-gradient(to bottom, @light 0%, darken(@light, @var-gradient) 100%) @light;
 	width: 100%;
 	min-height: 50px;
@@ -41,8 +39,6 @@
 	}
 	& ul > li:hover > a {
 	  background: -webkit-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
-	  background: -moz-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
-	  background: -ms-linear-gradient(top, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
 	  background: linear-gradient(to bottom, darken(@light, @var-gradient) 0%, darken(@light, @var-gradient*2) 100%) @light;
 	  color: @dark;
 	  border-bottom: 5px solid darken(@light, 30%);
@@ -52,10 +48,7 @@
 	  background-color: @color;
 	  border-bottom: 5px solid darken(@color, 20%);
 	  background: -webkit-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
-	  background: -moz-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
-	  background: -ms-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
 	  background: linear-gradient(to bottom, @color 0%, darken(@color, @var-gradient) 100%);
-		-moz-box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
 		box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
 	}
 	& ul > li.logo {
@@ -76,8 +69,6 @@
 	  color: @dark;
 	  border-bottom: 5px solid @light;
 	  -webkit-transition: all .3s ease;
-	  -moz-transition: all .3s ease;
-	  -ms-transition: all .3s ease;
 	  transition: all .3s ease;
 	}
 	& ul > li ul > li {
@@ -131,8 +122,6 @@
 	border-bottom: 5px solid darken(@color, 20%);
 	margin-bottom: -5px;
 	background: -webkit-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
-	background: -moz-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
-	background: -ms-linear-gradient(top, @color 0%, darken(@color, @var-gradient) 100%);
 	background: linear-gradient(to bottom, @color 0%, darken(@color, @var-gradient) 100%);
 	box-shadow: -1px 0 rgba(0, 0, 0, @active-shadow), 1px 0 rgba(0, 0, 0, @active-shadow);
   
@@ -142,19 +131,17 @@
 		width: 25px;
 		height: 3px;
 		background-color: lighten(@color, 5%);
-		-moz-box-shadow: 0 -1px 0 lighten(@color, 10%),0 1px 0 darken(@color, 10%);
 		box-shadow: 0 -1px 0 lighten(@color, 10%), 0 1px 0 darken(@color, 10%);
 		position: absolute;
 		display: block;
-		transition: all .05s linear;
+		-webkit-transition: all .2s linear;
+        transition: all .2s linear;
 	}
 	&.active .bar{
 		box-shadow: none;
 		top: 20px;
 		-webkit-transform: rotateZ(45deg);
-		-moz-transform: rotateZ(45deg);
 		-ms-transform: rotateZ(45deg);
-		-o-transform: rotateZ(45deg);
 		transform: rotateZ(45deg);
 		background-color: lighten(@color, 10%);
 	}
@@ -163,9 +150,7 @@
 		top: 0;
 		box-shadow: none;
 		-webkit-transform: rotateZ(-45deg);
-		-moz-transform: rotateZ(-45deg);
 		-ms-transform: rotateZ(-45deg);
-		-o-transform: rotateZ(-45deg);
 		transform: rotateZ(-45deg);
 	}
 	
@@ -174,9 +159,7 @@
 		top: 0px;
 		background-color: lighten(@color, 10%);
 		-webkit-transform: rotateZ(-90deg);
-		-moz-transform: rotateZ(-90deg);
 		-ms-transform: rotateZ(-90deg);
-		-o-transform: rotateZ(-90deg);
 		transform: rotateZ(-90deg);
 	}
 	
